@@ -1,25 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<link rel="icon" href="assets/logo-g.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="./support.js"></script>
-</head>
-<body>
-<x-dc>
-<helmet>
 <title>بوب لين | Popleen</title>
+<meta name="description" content="بوب لين علامة سعودية تقدّم البقوليات والحبوب والبهارات بعبوات نظيفة ومحكمة، تعبئة المدينة المنورة.">
+<link rel="icon" href="assets/logo-g.png">
+<link rel="preload" as="image" href="assets/s/kabsa.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&amp;family=Readex+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Readex+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+html{scroll-behavior:smooth;}
 html,body{margin:0;background:#fbf8ef;}
 *{box-sizing:border-box;}
+img{max-width:100%;}
 a{color:#234a1e;text-decoration:none;}
 a:hover{color:#3d6b33;}
+section{scroll-margin-top:80px;}
+.h1:hover{background:#ffffff !important;color:#234a1e !important;}
+.h2:hover{border-color:#f7efd9 !important;color:#f7efd9 !important;}
+.h3:hover{transform:scale({{ p.hscale }}) !important;}
+.h4:hover{background:rgba(247,239,217,.14) !important;color:#f7efd9 !important;}
+.h5:hover{background:#2f5f28 !important;color:#f7efd9 !important;}
+.tab{font-family:'Readex Pro',sans-serif;font-size:15px;font-weight:500;border:0;cursor:pointer;padding:10px 20px;border-radius:999px;background:transparent;color:#234a1e;}
+.tab.on{background:#234a1e;color:#f7efd9;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:20px;}
+.card{display:flex;flex-direction:column;gap:12px;}
+.card.hide{display:none;}
+.ph{aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:#e1e2df;}
+.ph img{display:block;width:100%;height:100%;object-fit:cover;transform:scale(var(--s));transition:transform .4s;}
+@media (hover:hover){.card:hover .ph img{transform:scale(calc(var(--s) + .1));}}
+.pn{font-family:'Readex Pro',sans-serif;font-weight:600;font-size:17px;color:#1d2a19;}
+@media (max-width:760px){
+  .nav{display:none !important;}
+  header img{height:42px !important;}
+  #top > div{padding:40px 20px 48px !important;gap:32px !important;}
+  #top p{font-size:17px !important;}
+  #quality > div{grid-template-columns:1fr 1fr !important;padding:28px 20px !important;gap:20px !important;}
+  #quality > div > div > div:nth-child(2){font-size:17px !important;}
+  #products{padding:56px 16px !important;}
+  .grid{grid-template-columns:repeat(3,1fr);gap:16px 10px;}
+  .card{gap:6px;}
+  .ph{border-radius:12px;}
+  .card > div:last-child{flex-direction:column;align-items:flex-start !important;gap:2px !important;padding:0 2px !important;}
+  .pn{font-size:13px;line-height:1.35;}
+  .card > div:last-child > div:nth-child(2){font-size:11px !important;}
+  #top > div > div:last-child{aspect-ratio:16/10 !important;gap:10px !important;}
+  #top > div > div:last-child > div{border-radius:14px !important;}
+  .tab{padding:9px 14px;font-size:14px;}
+  #about > div{padding:56px 20px !important;gap:32px !important;}
+  #about p{font-size:16px !important;}
+  #about > div > div:last-child > div{padding:16px !important;}
+  #about > div > div:last-child > div > div:last-child{font-size:16px !important;}
+  #contact > div{padding:56px 20px 32px !important;gap:40px !important;}
+  #contact a, #contact > div > div > div > div{flex-wrap:wrap;padding:16px 18px !important;}
+  #contact a span:last-child, #contact > div > div > div > div span:last-child{font-size:17px !important;}
+}
 </style>
-</helmet>
-<div dir="rtl" style="font-family:'IBM Plex Sans Arabic',sans-serif;color:#1d2a19;background:#fbf8ef;min-height:100vh;">
+</head>
+<body>
+<div style="font-family:'IBM Plex Sans Arabic',sans-serif;color:#1d2a19;background:#fbf8ef;min-height:100vh;overflow-x:hidden;">
+<header style="position:sticky;top:0;z-index:10;background:rgba(251,248,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e8e0c9;">
+    <div style="max-width:1240px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;">
+      <a href="#top" style="display:flex;align-items:center;"><img src="assets/logo-g.png" alt="بوب لين" style="height:52px;width:auto;display:block;"></a>
+      <nav class="nav" style="display:flex;gap:28px;flex-wrap:wrap;font-family:'Readex Pro',sans-serif;font-size:15px;font-weight:500;">
+        <a href="#about">من نحن</a>
+        <a href="#products">منتجاتنا</a>
+        <a href="#quality">الجودة</a>
+        <a href="#contact">تواصل معنا</a>
+      </nav>
+      <a href="https://wa.me/966570709220" style="font-family:'Readex Pro',sans-serif;font-size:14px;font-weight:600;background:#234a1e;color:#f7efd9;padding:10px 20px;border-radius:999px;" class="h5">أطلب الأن</a>
+    </div>
+  </header>
+
 
   
 
@@ -30,8 +84,8 @@ a:hover{color:#3d6b33;}
         <h1 style="margin:0;font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(40px,5.4vw,72px);line-height:1.15;text-wrap:balance;">امنح أطباقك لمسة مميزة مع بهاراتنا الفاخرة</h1>
         <p style="margin:0;font-size:19px;line-height:1.8;color:#e4dcc3;max-width:520px;text-wrap:pretty;">بوب لين علامة سعودية تقدّم البقوليات والحبوب والبهارات بعبوات نظيفة ومحكمة، منتقاة بعناية لتصل إلى مطبخك كما يجب.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap;">
-          <a href="#products" style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:16px;background:#f7efd9;color:#234a1e;padding:14px 28px;border-radius:999px;" style-hover="background:#ffffff;color:#234a1e;">تصفّح المنتجات</a>
-          <a href="#contact" style="font-family:'Readex Pro',sans-serif;font-weight:500;font-size:16px;color:#f7efd9;padding:14px 28px;border-radius:999px;border:1px solid rgba(247,239,217,.4);" style-hover="border-color:#f7efd9;color:#f7efd9;">تواصل معنا</a>
+          <a href="#products" style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:16px;background:#f7efd9;color:#234a1e;padding:14px 28px;border-radius:999px;" class="h1">تصفّح المنتجات</a>
+          <a href="#contact" style="font-family:'Readex Pro',sans-serif;font-weight:500;font-size:16px;color:#f7efd9;padding:14px 28px;border-radius:999px;border:1px solid rgba(247,239,217,.4);" class="h2">تواصل معنا</a>
         </div>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;aspect-ratio:1/1;">
@@ -58,32 +112,47 @@ a:hover{color:#3d6b33;}
         <h2 style="margin:0;font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(32px,3.6vw,48px);color:#234a1e;">من المخزن إلى مطبخك</h2>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;background:#efe8d3;padding:6px;border-radius:999px;">
-        <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
-          <button onClick="{{ t.onClick }}" style="font-family:'Readex Pro',sans-serif;font-size:15px;font-weight:500;border:0;cursor:pointer;padding:10px 20px;border-radius:999px;background:{{ t.bg }};color:{{ t.fg }};">{{ t.label }} <span style="opacity:.6;font-size:13px;">{{ t.count }}</span></button>
-        </sc-for>
+        <button class="tab on" data-tab="all">الكل <span style="opacity:.6;font-size:13px;">30</span></button><button class="tab" data-tab="spices">البهارات <span style="opacity:.6;font-size:13px;">15</span></button><button class="tab" data-tab="pulses">البقوليات والحبوب <span style="opacity:.6;font-size:13px;">15</span></button>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax({{ minCol }},1fr));gap:20px;">
-      <sc-for list="{{ items }}" as="p" hint-placeholder-count="8">
-        <div style="display:flex;flex-direction:column;gap:12px;">
-          <div style="aspect-ratio:1/1;border-radius:18px;overflow:hidden;background:#e1e2df;">
-            <img src="{{ p.img }}" alt="{{ p.name }}" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:{{ p.pos }};transform:scale({{ p.scale }});transition:transform .4s;" style-hover="transform:scale({{ p.hscale }});">
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;">
-            <div style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:17px;color:#1d2a19;">{{ p.name }}</div>
-            <sc-if value="{{ p.showWeight }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">{{ p.weight }}</div></sc-if>
-          </div>
-        </div>
-      </sc-for>
-    </div>
+    <div class="grid"><div class="card" data-cat="spices"><div class="ph"><img src="assets/s/kabsa.webp" alt="بهارات الكبسة" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">بهارات الكبسة</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/seven.webp" alt="البهارات السبعة" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">البهارات السبعة</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/chicken.webp" alt="بهارات الدجاج" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">بهارات الدجاج</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/curry.webp" alt="بهارات الكاري" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">بهارات الكاري</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/potato.webp" alt="بهارات البطاطس" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">بهارات البطاطس</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/italian.webp" alt="البهارات الإيطالية" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">البهارات الإيطالية</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">150 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/cumin.webp" alt="كمون مطحون" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">كمون مطحون</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">130 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/coriander-ground.webp" alt="كزبرة مطحون" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">كزبرة مطحون</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/blackpepper-ground.webp" alt="فلفل أسود مطحون" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">فلفل أسود مطحون</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">130 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/redpepper-indian.webp" alt="فلفل أحمر هندي" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">فلفل أحمر هندي</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/paprika.webp" alt="شطة ببريكا" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">شطة ببريكا</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">170 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/cinnamon-ground.webp" alt="قرفة مطحون" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">قرفة مطحون</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">170 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/cloves.webp" alt="قرنفل" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">قرنفل</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">85 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/garlic-ground.webp" alt="ثوم مطحون" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">ثوم مطحون</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">230 gm</div></div></div>
+<div class="card" data-cat="spices"><div class="ph"><img src="assets/s/onion-ground.webp" alt="بصل مطحون" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 50%;--s:1.5;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">بصل مطحون</div><div style="font-size:13px;color:#7a6a3a;direction:ltr;white-space:nowrap;">200 gm</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/8.webp" alt="حمص" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">حمص</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/6.webp" alt="عدس أحمر" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">عدس أحمر</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/12.webp" alt="عدس جبة" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">عدس جبة</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/56.webp" alt="فاصوليا حمراء" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">فاصوليا حمراء</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/3.webp" alt="فاصوليا بيضاء" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">فاصوليا بيضاء</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/1.webp" alt="فول مصري" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">فول مصري</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/11.webp" alt="فشار" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">فشار</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/14.webp" alt="جريش" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">جريش</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/54.webp" alt="برغل خشن" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">برغل خشن</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/50.webp" alt="سميد" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">سميد</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/16.webp" alt="نارجين" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">نارجين</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/13.webp" alt="قرفة عيدان" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">قرفة عيدان</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/15.webp" alt="زعتر" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">زعتر</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/17.webp" alt="ورق غار" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">ورق غار</div></div></div>
+<div class="card" data-cat="pulses"><div class="ph"><img src="uploads/18.webp" alt="سماق" loading="lazy" decoding="async" width="900" height="900" style="object-position:50% 60%;--s:1.22;"></div><div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:0 4px;"><div class="pn">سماق</div></div></div></div>
   </section>
 
   <section id="about" style="background:#efe8d3;">
-    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,420px),1fr)); gap: 56px; align-items: start; width: 1258px; height: 418px">
-      <div style="display: flex; flex-direction: column; gap: 20px; justify-content: flex-start; position: static; height: 317px; width: 585px; align-self: auto; overflow: auto">
+    <div style="max-width: 1240px; margin: 0 auto; padding: 88px 24px; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,420px),1fr)); gap: 56px; align-items: start">
+      <div style="display: flex; flex-direction: column; gap: 20px; justify-content: flex-start;">
         <div style="font-family:'Readex Pro',sans-serif;font-size:14px;color:#7a6a3a;">من نحن</div>
         
-        <h2 style="margin:0;font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:1.3;color:#234a1e;text-wrap:balance;">شركة سعودية من المدينة المنورة</h2><p style="margin: 0; font-size: 18px; line-height: 1.9; color: #3b4733; text-wrap: pretty; width: 468px; height: 242px">بوب لين علامة سعودية تهتم بتقديم منتجات غذائية مختارة بعناية، تجمع بين الجودة، والطعم، والأصالة.  نقدم مجموعة من البهارات، والبقوليات، والمكسرات وغيرها من المنتجات التي يحتاجها كل بيت، مع اهتمامنا بجودة المنتج وتغليفه وتفاصيله من الاختيار وحتى وصوله إليكم. <br>&nbsp;نستلهم هويتنا من روح المطبخ السعودي والخليجي، ونقدمها بأسلوب عصري يناسب احتياجات اليوم.<br>&nbsp;رؤيتنا  أن تكون بوب لين علامة موثوقة ومحبوبة، وخيارًا أساسيًا لكل من يبحث عن الجودة والطعم والثقة. <br>&nbsp;قيمنا  الجودة • الثقة • الأصالة • الاهتمام بالتفاصيل • التجدد  بوبلين.. جودة تبدأ من الاختيار. 🌿</p>
+        <h2 style="margin:0;font-family:'Readex Pro',sans-serif;font-weight:700;font-size:clamp(30px,3.4vw,44px);line-height:1.3;color:#234a1e;text-wrap:balance;">شركة سعودية من المدينة المنورة</h2><p style="margin: 0; font-size: 18px; line-height: 1.9; color: #3b4733; text-wrap: pretty;">بوب لين علامة سعودية تهتم بتقديم منتجات غذائية مختارة بعناية، تجمع بين الجودة، والطعم، والأصالة.  نقدم مجموعة من البهارات، والبقوليات، والمكسرات وغيرها من المنتجات التي يحتاجها كل بيت، مع اهتمامنا بجودة المنتج وتغليفه وتفاصيله من الاختيار وحتى وصوله إليكم. <br>&nbsp;نستلهم هويتنا من روح المطبخ السعودي والخليجي، ونقدمها بأسلوب عصري يناسب احتياجات اليوم.<br>&nbsp;رؤيتنا  أن تكون بوب لين علامة موثوقة ومحبوبة، وخيارًا أساسيًا لكل من يبحث عن الجودة والطعم والثقة. <br>&nbsp;قيمنا  الجودة • الثقة • الأصالة • الاهتمام بالتفاصيل • التجدد  بوبلين.. جودة تبدأ من الاختيار. 🌿</p>
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#d9cfb2;border-radius:18px;overflow:hidden;">
         <div style="background:#fbf8ef;padding:24px;display:flex;flex-direction:column;gap:6px;"><div style="font-size:14px;color:#7a6a3a;">مدة الصلاحية</div><div style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:20px;color:#234a1e;">عامان من تاريخ التعبئة</div></div>
@@ -103,74 +172,23 @@ a:hover{color:#3d6b33;}
           <p style="margin:0;font-size:18px;line-height:1.8;color:#e4dcc3;max-width:460px;">للطلبات والتوزيع أو لأي ملاحظة على المنتج، يسعدنا تواصلك عبر خدمة العملاء.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:12px;">
-          <a href="tel:0570709220" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:16px;background:rgba(247,239,217,.08);color:#f7efd9;" style-hover="background:rgba(247,239,217,.14);color:#f7efd9;"><span style="font-size:15px;color:#c9d98f;">هاتف وواتساب</span><span style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:22px;direction:ltr;">0570709220</span></a>
-          <a href="mailto:popleen.sa@gmail.com" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:16px;background:rgba(247,239,217,.08);color:#f7efd9;" style-hover="background:rgba(247,239,217,.14);color:#f7efd9;"><span style="font-size:15px;color:#c9d98f;">البريد الإلكتروني</span><span style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:20px;direction:ltr;">popleen.sa@gmail.com</span></a>
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; border-radius: 16px; background: rgba(247,239,217,.08); width: 573px; height: 52px"><span style="font-size:15px;color:#c9d98f;">الموقع</span><span style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:20px;">السعودية - المدينة المنورة - الصناعية</span></div>
+          <a href="tel:0570709220" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:16px;background:rgba(247,239,217,.08);color:#f7efd9;" class="h4"><span style="font-size:15px;color:#c9d98f;">هاتف وواتساب</span><span style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:22px;direction:ltr;">0570709220</span></a>
+          <a href="mailto:popleen.sa@gmail.com" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;border-radius:16px;background:rgba(247,239,217,.08);color:#f7efd9;" class="h4"><span style="font-size:15px;color:#c9d98f;">البريد الإلكتروني</span><span style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:20px;direction:ltr;">popleen.sa@gmail.com</span></a>
+          <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 24px; border-radius: 16px; background: rgba(247,239,217,.08);"><span style="font-size:15px;color:#c9d98f;">الموقع</span><span style="font-family:'Readex Pro',sans-serif;font-weight:600;font-size:20px;">السعودية - المدينة المنورة - الصناعية</span></div>
         </div>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;border-top:1px solid rgba(247,239,217,.18);padding-top:28px;">
         <img src="assets/logo-c.png" alt="بوب لين" style="height:56px;width:auto;">
         <div style="font-size:14px;color:#c4bca3;">© 2026 شركة بوب لين. جميع الحقوق محفوظة.</div>
       </div>
-    </div><header style="position:sticky;top:0;z-index:10;background:rgba(251,248,239,.94);backdrop-filter:blur(8px);border-bottom:1px solid #e8e0c9;">
-    <div style="max-width:1240px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
-      <a href="#top" style="display:flex;align-items:center;"><img src="assets/logo-g.png" alt="بوب لين" style="height:52px;width:auto;display:block;"></a>
-      <nav style="display:flex;gap:28px;flex-wrap:wrap;font-family:'Readex Pro',sans-serif;font-size:15px;font-weight:500;">
-        <a href="#about">من نحن</a>
-        <a href="#products">منتجاتنا</a>
-        <a href="#quality">الجودة</a>
-        <a href="#contact">تواصل معنا</a>
-      </nav>
-      <a href="https://wa.me/966570709220" style="font-family:'Readex Pro',sans-serif;font-size:14px;font-weight:600;background:#234a1e;color:#f7efd9;padding:10px 20px;border-radius:999px;" style-hover="background:#2f5f28;color:#f7efd9;">أطلب الأن</a>
-    </div>
-  </header></section>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;showWeights&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;المنتجات&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;كبيرة&quot;,&quot;متوسطة&quot;,&quot;صغيرة&quot;],&quot;default&quot;:&quot;متوسطة&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;المنتجات&quot;}}">
-const SP = (img, name, weight) => ({ img: 'assets/s/' + img + '.webp', name, weight, cat: 'spices' });
-const PL = (img, name) => ({ img: 'uploads/' + img + '.webp', name, weight: '', cat: 'pulses' });
-const PRODUCTS = [
-  SP('kabsa','بهارات الكبسة','200 gm'), SP('seven','البهارات السبعة','200 gm'), SP('chicken','بهارات الدجاج','200 gm'),
-  SP('curry','بهارات الكاري','200 gm'), SP('potato','بهارات البطاطس','200 gm'), SP('italian','البهارات الإيطالية','150 gm'),
-  SP('cumin','كمون مطحون','130 gm'), SP('turmeric','كركم مطحون','235 gm'), SP('coriander-ground','كزبرة مطحون','200 gm'),
-  SP('coriander-whole','كزبرة حب','80 gm'), SP('blackpepper-ground','فلفل أسود مطحون','130 gm'), SP('blackpepper-whole','فلفل أسود حب','130 gm'),
-  SP('redpepper-indian','فلفل أحمر هندي','200 gm'), SP('redpepper-whole','فلفل أحمر حب','80 gm'), SP('paprika','شطة ببريكا','170 gm'),
-  SP('cinnamon-ground','قرفة مطحون','170 gm'), SP('cloves','قرنفل','85 gm'), SP('ginger','زنجبيل مطحون','170 gm'),
-  SP('garlic-ground','ثوم مطحون','230 gm'), SP('garlic-dry','ثوم مجفف','130 gm'), SP('onion-ground','بصل مطحون','200 gm'),
-  SP('onion-dry','بصل مجفف','80 gm'), SP('blacklemon','ليمون أسود مطحون','130 gm'), SP('citric','ملح ليمون','280 gm'),
-  SP('fenugreek','حلبة','280 gm'), SP('fennel','شمر','170 gm'), SP('nigella','حبة البركة','230 gm'),
-  SP('sesame','سمسم حب','200 gm'), SP('soda','بيكربونات الصوديوم','370 gm'),
-  PL('8','حمص'), PL('6','عدس أحمر'), PL('12','عدس جبة'), PL('2','ماش أصفر'), PL('56','فاصوليا حمراء'),
-  PL('3','فاصوليا بيضاء'), PL('1','فول مصري'), PL('10','لوبيا'), PL('4','ترمس'), PL('11','فشار'),
-  PL('14','جريش'), PL('54','برغل خشن'), PL('50','سميد'), PL('16','نارجين'),
-  PL('13','قرفة عيدان'), PL('15','زعتر'), PL('17','ورق غار'), PL('18','سماق'),
-];
-const TABS = [['all','الكل'],['spices','البهارات'],['pulses','البقوليات والحبوب']];
+    </div></section>
 
-class Component extends DCLogic {
-  state = { tab: 'all' };
-  renderVals() {
-    const tab = this.state.tab;
-    const showWeights = this.props.showWeights ?? true;
-    const density = this.props.density ?? 'متوسطة';
-    const minCol = { 'كبيرة': '280px', 'متوسطة': '210px', 'صغيرة': '160px' }[density] || '210px';
-    const items = PRODUCTS.filter(p => tab === 'all' || p.cat === tab).map(p => ({
-      ...p,
-      showWeight: showWeights && !!p.weight,
-      scale: p.cat === 'spices' ? 1.5 : 1.22,
-      hscale: p.cat === 'spices' ? 1.6 : 1.3,
-      pos: p.cat === 'spices' ? '50% 50%' : '50% 60%',
-    }));
-    const tabs = TABS.map(([id, label]) => ({
-      label,
-      count: id === 'all' ? PRODUCTS.length : PRODUCTS.filter(p => p.cat === id).length,
-      bg: tab === id ? '#234a1e' : 'transparent',
-      fg: tab === id ? '#f7efd9' : '#234a1e',
-      onClick: () => this.setState({ tab: id }),
-    }));
-    return { items, tabs, minCol };
-  }
-}
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.dataset.tab;document.querySelectorAll('.tab').forEach(function(x){x.classList.toggle('on',x===b);});
+  document.querySelectorAll('.card').forEach(function(c){c.classList.toggle('hide',t!=='all'&&c.dataset.cat!==t);});
+});});
 </script>
 </body>
 </html>
